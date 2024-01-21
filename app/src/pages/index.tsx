@@ -3,6 +3,7 @@ import { Inter, Gochi_Hand, DM_Sans } from "next/font/google";
 import { FaXTwitter, FaDiscord, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Video from 'next-video';
 import awesomeVideo from '/videos/open.mp4';
+import { useState } from "react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +19,13 @@ const dm = DM_Sans({
 })
 
 export default function Home() {
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleDivClick = (index: any) => {
+    setActiveIndex(index);
+  };
+  
   return (
     <main
       className={`flex min-h-screen text-white bg-black flex-col ${dm.className}`}
@@ -118,19 +126,34 @@ export default function Home() {
     </section>
 
     <section className="grid grid-cols-2 h-screen">
-     <div className="h-[100%] flex flex-col gap-5 w-[100%] px-[10%]">
-      <div className="border-white cursor-pointer border-[1.5px] text-4xl font-semibold flex items-center justify-center p-8 rounded-2xl">
+    <div className="h-[100%] flex flex-col gap-5 w-[100%] px-[10%]">
+      <div
+        className={`${
+          activeIndex === 0 ? 'bg-[#638596]' : 'bg-black border-[1.5px]'
+        } border-white cursor-pointer text-4xl font-semibold flex items-center justify-center p-8 rounded-2xl`}
+        onClick={() => handleDivClick(0)}
+      >
         Punks with blue background are not for sale and not up for bids
       </div>
 
-      <div className="border-white cursor-pointer border-[1.5px] text-4xl font-semibold flex items-center justify-start p-8 rounded-2xl">
+      <div
+        className={`${
+          activeIndex === 1 ? 'bg-[#95554e]' : 'bg-black border-[1.5px]'
+        } border-white cursor-pointer text-4xl font-semibold flex items-center justify-start p-8 rounded-2xl`}
+        onClick={() => handleDivClick(1)}
+      >
         Buy now pay later
       </div>
 
-      <div className="border-white cursor-pointer border-[1.5px] text-4xl font-semibold flex items-center justify-start p-8 rounded-2xl">
-        Verify the authencity of any product
+      <div
+        className={`${
+          activeIndex === 2 ? 'bg-[#8e6fb5]' : 'bg-black border-[1.5px]'
+        } border-white cursor-pointer text-4xl font-semibold flex items-center justify-start p-8 rounded-2xl`}
+        onClick={() => handleDivClick(2)}
+      >
+        Verify the authenticity of any product
       </div>
-     </div>
+    </div>
     </section>
 
     {/* <section className="w-[100%] overflow-hidden">
