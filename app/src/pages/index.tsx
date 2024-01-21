@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Inter, Gochi_Hand, DM_Sans } from "next/font/google";
-import { FaXTwitter, FaDiscord } from "react-icons/fa6";
+import { FaXTwitter, FaDiscord, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Video from 'next-video';
 import awesomeVideo from '/videos/open.mp4';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -116,12 +117,56 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="w-[100%] overflow-hidden">
+    <section className="grid grid-cols-2 h-screen">
+     <div className="h-[100%] flex flex-col gap-5 w-[100%] px-[10%]">
+      <div className="border-white cursor-pointer border-[1.5px] text-4xl font-semibold flex items-center justify-center p-8 rounded-2xl">
+        Punks with blue background are not for sale and not up for bids
+      </div>
+
+      <div className="border-white cursor-pointer border-[1.5px] text-4xl font-semibold flex items-center justify-start p-8 rounded-2xl">
+        Buy now pay later
+      </div>
+
+      <div className="border-white cursor-pointer border-[1.5px] text-4xl font-semibold flex items-center justify-start p-8 rounded-2xl">
+        Verify the authencity of any product
+      </div>
+     </div>
+    </section>
+
+    {/* <section className="w-[100%] overflow-hidden">
     <Video 
     autoPlay
     loop
     controls={false}
     src={awesomeVideo} />
+    </section> */}
+
+    <section className="bg-contain bg-center p-10 py-[7%]" style={{ backgroundImage: `url('section.png')` }}>
+      <div className="flex flex-row justify-between">
+      <h3 className="text-black font-semibold text-5xl">Largest Sales</h3>
+      <button className="bg-white text-black font-bold px-8 py-3 border-black border-[3px] rounded-full">View all</button>
+      </div>
+
+      <div className="flex items-center justify-between mt-3">
+        <div className=" w-[20%] flex justify-center">
+          <button>
+           <FaArrowLeft color="black" size={40} />
+          </button>
+        </div>
+
+        <div className="h-[80%] w-[60%] text-black flex flex-col items-center">
+        <img src="sale.jpeg" alt="" className="h-[100%] w-[100%]" />
+        <h3 className="font-semibold text-lg">Northface Jacket XL</h3>
+        <h3> 200 USDC</h3>
+        </div>
+        
+        <div className=" w-[20%] flex justify-center">
+          <button>
+           <FaArrowRight color="black" size={40} />
+          </button>
+        </div>
+      </div>
+      
     </section>
 
     </main>
