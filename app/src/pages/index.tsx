@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { Inter, Gochi_Hand, DM_Sans } from "next/font/google";
 import { FaXTwitter, FaDiscord, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
@@ -28,8 +29,9 @@ export default function Home() {
   
   return (
     <main
-      className={`flex min-h-screen text-white bg-black flex-col ${dm.className}`}
+      className={`flex min-h-screen text-white flex-col ${dm.className}`}
     >
+      <section className="bg-black">
       <div className="w-[100%] flex flex-row justify-between py-6 px-7">
       <h1 className={`text-white text-3xl ${gochi.className}`}>underground</h1>
       <div className="flex items-center gap-5">
@@ -51,8 +53,8 @@ export default function Home() {
         
       <button className="bg-black text-white font-bold px-8 py-3 border-white border-[3px] rounded-full hover:bg-white hover:text-black">Get Started</button>
       </div>
-
-      <section className="h-[100%] py-[4%] overflow-hidden">
+      </section>
+      <section className="h-[100%] bg-black py-[4%] overflow-hidden">
 
 
        <div>
@@ -93,7 +95,7 @@ export default function Home() {
 
       </section>
 
-      <section className="flex h-[80vh] flex-col items-center">
+      <section className="flex h-[80vh] bg-black flex-col items-center">
 
         <h4 className="text-2xl">How it works</h4>
 
@@ -104,7 +106,7 @@ export default function Home() {
         </div>
       </section>
 
-    <section className="h-[100vh]">
+    <section className="h-[100vh] bg-black">
       <div className="grid grid-cols-2 px-[6%] h-[100%]">
 
         <div className="text-black h-[100%] flex items-center">
@@ -125,7 +127,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="grid grid-cols-2 h-screen">
+    <section className="grid grid-cols-2 bg-black h-screen">
     <div className="h-[100%] flex flex-col gap-5 w-[100%] px-[10%]">
       <div
         className={`${
@@ -156,15 +158,7 @@ export default function Home() {
     </div>
     </section>
 
-    {/* <section className="w-[100%] overflow-hidden">
-    <Video 
-    autoPlay
-    loop
-    controls={false}
-    src={awesomeVideo} />
-    </section> */}
-
-    <section className="bg-contain bg-center p-10 py-[7%]" style={{ backgroundImage: `url('section.png')` }}>
+    <section className="bg-contain bg-center h-[150vh] p-10 py-[7%] bg-white">
       <div className="flex flex-row justify-between">
       <h3 className="text-black font-semibold text-5xl">Largest Sales</h3>
       <button className="bg-white text-black font-bold px-8 py-3 border-black border-[3px] rounded-full">View all</button>
@@ -173,7 +167,7 @@ export default function Home() {
       <div className="flex items-center justify-between mt-3">
         <div className=" w-[20%] flex justify-center">
           <button>
-           <FaArrowLeft color="black" size={40} />
+          <img src="arrow.png" alt="" className="h-[25px] scale-x-[-1]" />
           </button>
         </div>
 
@@ -185,11 +179,71 @@ export default function Home() {
         
         <div className=" w-[20%] flex justify-center">
           <button>
-           <FaArrowRight color="black" size={40} />
+            <img src="arrow.png" alt="" className="h-[25px]" />
           </button>
         </div>
       </div>
       
+    </section>
+   {/**chnage the background of the page itsef to white */}
+   <section className="bg-white relative -z-[3]">
+  <div className="h-[100%] w-[100%] bg-black grid grid-cols-7 rounded-tl-[3rem] rounded-tr-[3rem] relative z[-3]">
+    <div className="h-[100%] w-[100%] col-span-3 p-10 pt-[25%]">
+      <h3 className="font-semibold text-5xl">How do I use ?</h3>
+    </div>
+    <div className="h-[100%] flex items-center justify-center w-[100%] relative">
+      <div id="points-section" className="py-[%] bg-green-00 flex flex-col items-center justify-between h-[100%] z-[10] w-[30%]">
+        
+        <div className="w-[5rem] bg-black flex flex-col justify-center items-center">
+        <div className="h-[9rem] w-full bg-black"></div>
+        <div className="w-[3rem] h-[3rem] bg-black rounded-full flex justify-center items-center border-white border-[2px]">
+          <span>1</span>
+        </div>
+        </div>
+        <div className="w-[3rem] h-[3rem] rounded-full bg-black flex justify-center items-center border-white border-[2px]">
+          <span>2</span>
+        </div>
+        <div className="w-[5rem] bg-black flex flex-col justify-center items-center">
+        <div className="w-[3rem] h-[3rem] bg-black rounded-full flex justify-center items-center border-white border-[2px]">
+          <span>3</span>
+        </div>
+        <div className="h-[9rem] w-full bg-black"></div>
+        </div>
+      </div>
+      <div id="progress" className="bg-[#FFFFFF30] fixed top-0 h-[100%] w-[2px]">
+        <div id="progress-line" className="bg-white h-[50vh] "></div>
+      </div>
+    </div>
+    <div className="h-[100%] p10 w-[100%] col-span-3 z-40">
+      <div className="flex flex-col py-[25%] px-10">
+       <img src="phantom.svg" alt="" className="h-[70px] w-[70px] rounded-full" />
+       <h3 className="font-semibold text-2xl py-4">Download and Install Phantom</h3>
+       <p>Download and install a Chrome browser plugin called Phantom. This will allow websites (that you authorize) access to your Ethereum account.</p>
+       <button className="bg-black my-4 text-white font-bold px-8 py-3 border-white border-[1.5px] w-[50%] rounded-full hover:bg-white hover:text-black">
+       Download Phantom
+      </button>
+      </div>
+
+      <div className="flex flex-col py-[25%] px-10">
+       <img src="solana.png" alt="" className="h-[70px] w-[70px] rounded-full" />
+       <h3 className="font-semibold text-2xl py-4">Buy some solana</h3>
+       <p>If you made a new account, buy some Ethereum. The MetaMask plugin has a button that will allow you to buy Ether from Coinbase.</p>
+      </div>
+
+      <div className="flex flex-col py-[25%] px-10">
+       <h3 className="font-semibold text-2xl py-4">Start bidding, buying and selling</h3>
+       <p>Once you have the plugin installed, this website will recognize it and add buttons that allow you to bid on, buy and sell punks directly in the interface.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section className="w-[100%] overflow-hidden">
+    <Video 
+    autoPlay
+    loop
+    controls={false}
+    src={awesomeVideo} />
     </section>
 
     </main>
