@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter, Gochi_Hand, DM_Sans } from "next/font/google";
 import { FaXTwitter, FaDiscord, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Video from 'next-video';
-import awesomeVideo from '/videos/open.mp4';
+import awesomeVideo from '../../videos/open.mp4';
 import { useState } from "react";
 
 
@@ -95,13 +95,30 @@ export default function Home() {
 
       </section>
 
-      <section className="flex h-[80vh] bg-black flex-col items-center">
+      <section className="flex h-[100vh] pt-12 bg-black flex-col items-center">
 
-        <h4 className="text-2xl">How it works</h4>
+        <h4 className="text-4xl font-semibold py-12">Features</h4>
 
-        <div className="w-[100%] h-[100%] px-[5%] justify-start">
-          <div className="rounded-xl h-[60%] w-[28%] p-5 bg-purple-600 ">
-           <span className="font-semibold text-2xl">Text to Speech</span>
+        <div className="w-[100%] h-[100%] my-4 gap-[5%] px-[8%] grid grid-cols-2 justify-start">
+          {/* <div className="rounded-xl h-[80%] w-[100%] p-5 text-black border-[#00000040] border-[2px] bg-[#F59F9F] ">
+            <div className="w-[100%]">
+            <span className="font-semibold text-2xl">cNFT Trading</span>
+            </div>
+           
+          </div> */}
+          <div className="rounded-xl h-[80%] w-[100%] border-[#00000040] border-[5px] p-5 bg-[#C5F9D7] ">
+          <div className="flex items-center justify-between">
+            <span className={`text-black text-3xl ${gochi.className}`}>Trade tangibles</span>
+            <img src="tensor.svg" alt="" className="h-[50px] w-[50px]" />
+            </div>
+          </div>
+
+          <div className="rounded-xl h-[80%] w-[100%] border-[#00000040] border-[5px] text-black p-5 bg-[#F5E89F] ">
+            <div className="flex items-center justify-between">
+            <span className={`text-black text-3xl ${gochi.className}`}>Manage your crew</span>
+            <img src="squads.svg" alt="" className="h-[50px] w-[50px]" />
+            </div>
+           
           </div>
         </div>
       </section>
@@ -243,7 +260,7 @@ export default function Home() {
     autoPlay
     loop
     controls={false}
-    src={awesomeVideo} />
+    src="https://stream.mux.com/VEziXgFmSHNNMJ3tmWt3FBzpLaiL00XxbyYrESKum4OA.m3u8" />
     </section>
 
     </main>
