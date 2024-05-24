@@ -1,26 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
 
-import { useState, useRef, useEffect } from "react";
-import Link from "next/link";
+import { useState } from "react";
+import Mobile from "./components/mobile";
+
 import Image from "next/image";
 import { Inter, Gochi_Hand, DM_Sans } from "next/font/google";
-import {
-  FaXTwitter,
-  FaDiscord,
-  FaArrowLeft,
-  FaArrowRight,
-} from "react-icons/fa6";
+import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import Video from "next-video";
-import awesomeVideo from "../../videos/open.mp4";
-
-import Bonk from "../../public/company/bonk1-bonk-logo.png";
-import Netflix from "../../public/company/Netflix_Symbol_RGB.png";
-import Spotify from "../../public/company/Spotify_Icon_RGB_White.png";
-import Tether from "../../public/company/tether-usdt-logo.png";
-import Solana from "../../public/company/solana-sol-logo.png";
-import Cola from "../../public/company/Coca-Cola_logo.png";
-import Nike from "../../public/company/001-nike-logos-swoosh-black.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,7 +46,7 @@ const Home = () => {
             <FaXTwitter size={25} className="cursor-pointer" />
             <FaDiscord size={30} className="cursor-pointer" />
           </div>
-          <MobileMenu />
+          <Mobile />
         </div>
 
         <div className="w-[100%] flex flex-col items-center pt-[5%] pb-[3%]">
@@ -81,25 +67,43 @@ const Home = () => {
         </div>
       </section>
       <section className="h-[100%] bg-black py-[4%] overflow-hidden">
-        <div>
-          <div className="w-[100%] whitespace-nowrap overflow-hidden">
-            <div className="py-3 font-semibold lg:text-3xl bg-purple-600">
-              Electionics • Streetwear • Gift Cards • Tickets • Games • Trading
-              • Speed Electionics • Streetwear • Gift Cards
+        <div className="flex flex-col w-screen overflow-hidden">
+          <div className="flex w-full whitespace-nowrap relative">
+            <div className=" py-3 pr-2 font-semibold lg:text-3xl bg-purple-600  animate-marquee">
+              Electronics • Streetwear • Gift Cards • Tickets • Games • Trading
+              • Speed Electronics • Streetwear • Gift Cards •
+            </div>
+
+            <div className="absolute left-0  py-3  font-semibold lg:text-3xl bg-purple-600 animate-marquee2 ">
+              Electronics • Streetwear • Gift Cards • Tickets • Games • Trading
+              • Speed Electronics • Streetwear • Gift Cards •
             </div>
           </div>
 
-          <div className="w-[100%] whitespace-nowrap overflow-hidden">
-            <div className="py-3 font-semibold lg:text-3xl text-black bg-green-600">
-              Electionics • Streetwear • Gift Cards • Tickets • Games • Trading
-              • Speed Electionics • Streetwear • Gift Cards
+          {/* 2 */}
+          <div className="flex w-full whitespace-nowrap relative">
+            <div className=" py-3 pr-2 font-semibold lg:text-3xl text-black bg-green-600 animate-banner1">
+              Electronics • Streetwear • Gift Cards • Tickets • Games • Trading
+              • Speed Electronics • Streetwear • Gift Cards •
+            </div>
+
+            <div className="absolute left-0  py-3  font-semibold lg:text-3xl text-black bg-green-600 animate-banner2 ">
+              Electronics • Streetwear • Gift Cards • Tickets • Games • Trading
+              • Speed Electronics • Streetwear • Gift Cards •
             </div>
           </div>
 
-          <div className="w-[100%] whitespace-nowrap overflow-hidden">
-            <div className="py-3 font-semibold lg:text-3xl text-black bg-white">
-              Electionics • Streetwear • Gift Cards • Tickets • Games • Trading
-              • Speed Electionics • Streetwear • Gift Cards
+          {/* 3 */}
+
+          <div className="flex w-full whitespace-nowrap relative">
+            <div className=" py-3 pr-2 font-semibold lg:text-3xl text-black bg-white animate-marquee">
+              Electronics • Streetwear • Gift Cards • Tickets • Games • Trading
+              • Speed Electronics • Streetwear • Gift Cards •
+            </div>
+
+            <div className="absolute left-0  py-3  font-semibold lg:text-3xl text-black bg-white animate-marquee2 ">
+              Electronics • Streetwear • Gift Cards • Tickets • Games • Trading
+              • Speed Electronics • Streetwear • Gift Cards •
             </div>
           </div>
         </div>
@@ -114,50 +118,120 @@ const Home = () => {
           {/* 1 */}
           <div className="flex flex-row gap-7 animate-marquee">
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl bg-black border-gray-600  border flex-shrink-0">
-              <Image className="" src={Netflix} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/Netflix_Symbol_RGB.png"
+                alt="Netflix"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-white border-gray-600  border">
-              <Image className="" src={Solana} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/solana-sol-logo.png"
+                alt="Solana"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl flex-shrink-0 bg-black border-gray-600  border ">
-              <Image className="" src={Bonk} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/bonk1-bonk-logo.png"
+                alt="Bonk"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-black border-gray-600  border">
-              <Image className="" src={Cola} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/Coca-Cola_logo.png"
+                alt="Coca-cola"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-white border-gray-600  border">
-              <Image className="" src={Tether} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/tether-usdt-logo.png"
+                alt="Tether"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-white border-gray-600  border">
-              <Image className="" src={Nike} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/001-nike-logos-swoosh-black.jpg"
+                alt="Nike"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-[#1db954] border-gray-600  border  mr-10">
-              <Image className="" src={Spotify} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/Spotify_Icon_RGB_White.png"
+                alt="Spoptify"
+              />
             </div>
           </div>
 
           {/* 2 */}
           <div className="flex flex-row gap-7 overflow-hidden no-scrollbar absolute top-0 animate-marquee2">
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl bg-black border-gray-600  border flex-shrink-0">
-              <Image className="" src={Netflix} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/Netflix_Symbol_RGB.png"
+                alt="Netflix"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-white border-gray-600  border">
-              <Image className="" src={Solana} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/solana-sol-logo.png"
+                alt="Solana"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl flex-shrink-0 bg-black border-gray-600  border ">
-              <Image className="" src={Bonk} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/bonk1-bonk-logo.png"
+                alt="Bonk"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-black border-gray-600  border ">
-              <Image className="" src={Cola} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/Coca-Cola_logo.png"
+                alt="Coca-cola"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-white border-gray-600  border">
-              <Image className="" src={Tether} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/tether-usdt-logo.png"
+                alt="Tether"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-white border-gray-600  border ">
-              <Image className="" src={Nike} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/001-nike-logos-swoosh-black.jpg"
+                alt="Nike"
+              />
             </div>
             <div className="flex items-center w-[9rem] h-[9rem] lg:w-[12rem] lg:h-[12rem] p-8 lg:p-6 rounded-3xl  flex-shrink-0 bg-[#1db954] border-gray-600  border  mr-7">
-              <Image className="" src={Spotify} alt="Netflix" />
+              <Image
+                width="250"
+                height="250"
+                src="/company/Spotify_Icon_RGB_White.png"
+                alt="Spoptify"
+              />
             </div>
           </div>
         </div>
@@ -374,121 +448,5 @@ const Home = () => {
     </main>
   );
 };
-
-export function MobileMenu() {
-  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
-
-  const trigger = useRef<HTMLButtonElement>(null);
-  const mobileNav = useRef<HTMLDivElement>(null);
-
-  // close the mobile menu on click outside
-  useEffect(() => {
-    const clickHandler = ({ target }: { target: EventTarget | null }): void => {
-      if (!mobileNav.current || !trigger.current) return;
-      if (
-        !mobileNavOpen ||
-        mobileNav.current.contains(target as Node) ||
-        trigger.current.contains(target as Node)
-      )
-        return;
-      setMobileNavOpen(false);
-    };
-    document.addEventListener("click", clickHandler);
-    return () => document.removeEventListener("click", clickHandler);
-  });
-
-  // close the mobile menu if the esc key is pressed
-  useEffect(() => {
-    const keyHandler = ({ keyCode }: { keyCode: number }): void => {
-      if (!mobileNavOpen || keyCode !== 27) return;
-      setMobileNavOpen(false);
-    };
-    document.addEventListener("keydown", keyHandler);
-    return () => document.removeEventListener("keydown", keyHandler);
-  });
-
-  return (
-    <div className="lg:hidden">
-      <button
-        ref={trigger}
-        className="w-6 h-6 fill-current text-white transition duration-200 ease-in-out"
-        aria-controls="mobile-nav"
-        aria-expanded={mobileNavOpen}
-        onClick={() => setMobileNavOpen(!mobileNavOpen)}
-      >
-        <span className="sr-only">Menu</span>
-        {!mobileNavOpen ? (
-          <svg
-            className="w-6 h-6 fill-current text-white transition duration-150 ease-in-out"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect y="4" width="24" height="2" rx="3" />
-            <rect y="11" width="24" height="2" rx="3" />
-            <rect y="18" width="24" height="2" rx="3" />
-          </svg>
-        ) : (
-          <svg
-            className="w-6 h-6 fill-current text-white transition duration-150 ease-in-out"
-            version="1.1"
-            id="_x32_"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-          >
-            <g>
-              <polygon points="512,157.124 466.488,111.621 322.099,256.009 466.488,400.397 512,354.876 413.125,256.009 	" />
-              <polygon points="400.388,45.513 354.876,0 256.009,98.876 157.124,0 111.602,45.513 256.009,189.901 	" />
-              <polygon
-                class="st0"
-                points="45.493,111.621 0,157.124 98.876,256.009 0,354.876 45.493,400.397 189.901,256.009 	"
-              />
-              <polygon
-                class="st0"
-                points="111.602,466.497 157.124,512 256.009,413.125 354.876,512 400.388,466.497 256.009,322.109 	"
-              />
-            </g>
-          </svg>
-        )}
-      </button>
-
-      <nav
-        id="mobile-nav"
-        ref={mobileNav}
-        className="absolute top-20 z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
-        style={
-          mobileNavOpen
-            ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 }
-            : { maxHeight: 0, opacity: 0.8 }
-        }
-      >
-        <ul className="flex flex-col gap-4 bg-white px-4 py-8  rounded-xl ">
-          <li>
-            <Link
-              href="/"
-              className="flex md:text-lg font-bold text-black hover:text-[#ffb703]  w-full py-2 justify-center"
-              onClick={() => setMobileNavOpen(false)}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/"
-              className="md:text-lg font-bold text-black hover:text-[#ffb703]  w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm  transition duration-150 ease-in-out"
-              onClick={() => setMobileNavOpen(false)}
-            >
-              FAQs
-            </Link>
-          </li>
-          <li>
-            <button className=" w-full p-2 inline-flex items-center justify-center bg-black text-white  font-bold  rounded-full">
-              Get Started
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  );
-}
 
 export default Home;

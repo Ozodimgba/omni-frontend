@@ -23,10 +23,20 @@ const config: Config = {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        marqueer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        marqueer2: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
-        marquee: "marquee 50s linear infinite",
-        marquee2: "marquee2 50s linear infinite",
+        marquee: "marquee 25s linear infinite",
+        marquee2: "marquee2 25s linear infinite",
+        banner1: " marqueer 25s linear infinite ",
+        banner2: "marqueer2 25s linear infinite",
       },
     },
   },
