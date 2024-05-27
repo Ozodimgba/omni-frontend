@@ -29,21 +29,22 @@ const Home = () => {
 
   return (
     <main className={`flex min-h-screen text-white flex-col ${dm.className}`}>
-      <section className="bg-black">
+      <section className="bg-[#101111]">
         <div className="w-[100%] flex flex-row  items-center justify-between py-6 px-7">
-          <h1 className={`text-white text-2xl lg:text-3xl ${gochi.className}`}>
-            omni
-          </h1>
+          <div className={`text-white flex items-center gap-2 text-2xl lg:text-3xl ${gochi.className}`}>
+            <Image src="./logo.svg" width={50} height={50} alt="logo" />
+            <h2>omni</h2>
+          </div>
           <div className="hidden lg:flex items-center gap-5">
-            <button>About</button>
-            <button>FAQs</button>
+            {/* <button>About</button>
+            <button>Docs</button> */}
             <button className="bg-white text-black font-bold px-8 py-3 rounded-full">
-              Login
+              Docs
             </button>
             <button className="bg-black text-white font-bold px-8 py-3 border-white border-[3px] rounded-full">
               Get Started
             </button>
-            <FaXTwitter size={25} className="cursor-pointer" />
+            <FaXTwitter size={25} href="https://x.com/use_Omni" className="cursor-pointer" />
             <FaDiscord size={30} className="cursor-pointer" />
           </div>
           <Mobile />
@@ -51,12 +52,11 @@ const Home = () => {
 
         <div className="w-[100%] flex flex-col items-center pt-[5%] pb-[3%]">
           <h3 className="text-2xl lg:text-8xl text-center font-extrabold text-white">
-            The stock market of the streets
+            Bringing the streets on solana
           </h3>
 
-          <p className="text-xs lg:text-xl tracking-wider mx-4 text-center py-3">
-            Omni is redefining the way we shop buy allowing prices to determined
-            by real time market forces
+          <p className="text-xs lg:text-xl xl:px-[13%] tracking-wider mx-4 text-center py-3">
+            Omni is redefining the way oralces are used on chain by bringing price of regular everyday items on chain
           </p>
         </div>
 
@@ -66,7 +66,7 @@ const Home = () => {
           </button>
         </div>
       </section>
-      <section className="h-[100%] bg-black py-[4%] overflow-hidden">
+      <section className="h-[100%] bg-[#101111] py-[4%] overflow-hidden">
         <div className="flex flex-col w-screen overflow-hidden">
           <div className="flex w-full whitespace-nowrap relative">
             <div className=" py-3 pr-2 font-semibold lg:text-3xl bg-purple-600  animate-marquee">
@@ -321,7 +321,7 @@ const Home = () => {
       <section className="bg-contain bg-center h-[80vh] sm:h-[120vh] lg:h-[150vh] p-10 py-[7%] bg-white">
         <div className="flex flex-row items-center justify-between">
           <h3 className="text-black font-semibold lg:text-5xl">
-            Largest Sales
+            Top Assets
           </h3>
           <button className="bg-white text-black font-bold p-2 lg:px-8 lg:py-3 border-black border-[3px] rounded-full">
             View all
