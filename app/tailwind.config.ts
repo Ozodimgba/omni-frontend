@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       clipPath: {
-        "semi-circle": "polygon(50% 0%, 100% 100%, 0% 100%)",
+        "semi-circle": "polygon(0 0, 100% 0, 100% 35%, 0 35%)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -43,19 +43,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    function ({
-      addUtilities,
-    }: {
-      addUtilities: (utilities: Record<string, Record<string, string>>) => void;
-    }) {
-      const newUtilities = {
-        ".clip-semi-circle": {
-          "clip-path": "polygon(0 0, 100% 0, 100% 35%, 0 35%)",
-        },
-      };
-      addUtilities(newUtilities);
-    },
-  ],
+  plugins: [],
 };
 export default config;
