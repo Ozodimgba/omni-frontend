@@ -5,8 +5,8 @@ import Mobile from "./components/mobile";
 
 import Image from "next/image";
 import { Inter, Gochi_Hand, DM_Sans } from "next/font/google";
-import { FaXTwitter, FaDiscord } from "react-icons/fa6";
-import Video from "next-video";
+import { FaXTwitter, FaDiscord, FaCheck, FaCopy } from "react-icons/fa6";
+import { LuBadgeCheck } from "react-icons/lu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +31,11 @@ const Home = () => {
     <main className={`flex min-h-screen text-white flex-col ${dm.className}`}>
       <section className="bg-[#101111]">
         <div className="w-[100%] flex flex-row  items-center justify-between py-6 px-7">
-          <div className={`text-white flex items-center gap-2 text-2xl lg:text-3xl ${gochi.className}`}>
+          <div
+            className={`text-white flex items-center gap-2 text-2xl lg:text-3xl ${gochi.className}`}
+          >
             <Image src="./logo.svg" width={50} height={50} alt="logo" />
-            <h2>omni</h2>
+            <h2 className="text-3xl lg:text-4xl">omni</h2>
           </div>
           <div className="hidden lg:flex items-center gap-5">
             {/* <button>About</button>
@@ -44,7 +46,11 @@ const Home = () => {
             <button className="bg-black text-white font-bold px-8 py-3 border-white border-[3px] rounded-full">
               Get Started
             </button>
-            <FaXTwitter size={25} href="https://x.com/use_Omni" className="cursor-pointer" />
+            <FaXTwitter
+              size={25}
+              href="https://x.com/use_Omni"
+              className="cursor-pointer"
+            />
             <FaDiscord size={30} className="cursor-pointer" />
           </div>
           <Mobile />
@@ -56,7 +62,8 @@ const Home = () => {
           </h3>
 
           <p className="text-xs lg:text-xl xl:px-[13%] tracking-wider mx-4 text-center py-3">
-            Omni is redefining the way oralces are used on chain by bringing price of regular everyday items on chain
+            Omni is redefining the way oralces are used on chain by bringing
+            price of regular everyday items on chain
           </p>
         </div>
 
@@ -320,9 +327,7 @@ const Home = () => {
 
       <section className="bg-contain bg-center h-[80vh] sm:h-[120vh] lg:h-[150vh] p-10 py-[7%] bg-white">
         <div className="flex flex-row items-center justify-between">
-          <h3 className="text-black font-semibold lg:text-5xl">
-            Top Assets
-          </h3>
+          <h3 className="text-black font-semibold lg:text-5xl">Top Assets</h3>
           <button className="bg-white text-black font-bold p-2 lg:px-8 lg:py-3 border-black border-[3px] rounded-full">
             View all
           </button>
@@ -336,8 +341,19 @@ const Home = () => {
           </div>
 
           <div className="h-[80%] w-[60%] text-black flex flex-col items-center">
+            <div className="  flex gap-2 lg:gap-4 mb-5 lg:mb-0 lg:mt-20 items-center rounded-xl p-2 lg:p-4 border border-[#7800A2] bg-[#7800A2]/40">
+              <span className="text-sm flex ">
+                <FaCopy />
+              </span>
+              <h2 className="text-[10px] md:text-base">
+                Ee79adtuYt4ecrJ6NFP8WF7FTcMb5hDuxRwLHsdu4VQM
+              </h2>
+            </div>
             <img src="sale.jpeg" alt="" className="h-[100%] w-[100%]" />
-            <h3 className="font-semibold lg:text-lg">Northface Jacket XL</h3>
+            <h3 className="flex items-center gap-2 lg:gap-4 mt-2 font-semibold text-xs lg:text-lg">
+              Northface Jacket XL{" "}
+              <LuBadgeCheck className=" rounded-full  text-2xl lg:text-4xl text-white fill-[#1db954]" />
+            </h3>
             <h3 className="text-xs lg:text-base"> 200 USDC</h3>
           </div>
 
@@ -349,101 +365,78 @@ const Home = () => {
         </div>
       </section>
       {/**chnage the background of the page itsef to white */}
-      <section className="bg-white relative -z-[3]">
-        <div className="h-[100%] w-[100%] bg-black grid grid-cols-7 rounded-tl-[3rem] rounded-tr-[3rem] relative z[-3]">
-          <div className="h-[100%] w-[100%] col-span-3 px-3 lg:p-10 pt-[25%]">
-            <h3 className="font-semibold text-xl lg:text-5xl">
-              How do I use ?
-            </h3>
-          </div>
-          <div className="h-[100%] flex items-center justify-center w-[100%] relative">
-            <div
-              id="points-section"
-              className="py-[%] bg-green-00 flex flex-col items-center justify-between h-[100%] z-[10] w-[30%]"
-            >
-              <div className="w-[5rem] bg-black flex flex-col justify-center items-center">
-                <div className="h-[9rem] w-full bg-black"></div>
-                <div className="w-[3rem] h-[3rem] bg-black rounded-full flex justify-center items-center border-white border-[2px]">
-                  <span>1</span>
-                </div>
-              </div>
-              <div className="w-[3rem] h-[3rem] rounded-full bg-black flex justify-center items-center border-white border-[2px]">
-                <span>2</span>
-              </div>
-              <div className="w-[5rem] bg-black flex flex-col justify-center items-center">
-                <div className="w-[3rem] h-[3rem] bg-black rounded-full flex justify-center items-center border-white border-[2px]">
-                  <span>3</span>
-                </div>
-                <div className="h-[9rem] w-full bg-black"></div>
-              </div>
-            </div>
-            <div
-              id="progress"
-              className="bg-[#FFFFFF30] fixed top-0 h-[100%] w-[2px]"
-            >
-              <div id="progress-line" className="bg-white h-[50vh] "></div>
+      <section className="bg-white h-[700px] relative ">
+        <div className="h-full w-full bg-black flex flex-col justify-center items-center pt-20 gap-60 absolute ">
+          <div className="flex flex-col justify-center items-center gap-10 pt-32 lg:pt-64 ">
+            <h1 className="text-3xl lg:text-5xl font-black tracking-wider">
+              Connect. Build. Earn
+            </h1>
+            <p className="text-sm md:text-lg lg:text-2xl text-center tracking-wider w-[70%]">
+              Data is a very profitable asset. Omni allows you to bring in your
+              data and build fun stuff on-chain{" "}
+            </p>
+            <div className="rounded-3xl p-2 lg:px-4 lg:py-2 text-sm md:text-lg font-semibold text-black bg-white">
+              <button>Documentation</button>
             </div>
           </div>
-          <div className="h-[100%] p10 w-[100%] col-span-3 z-40">
-            <div className="flex flex-col py-20 lg:py-[25%] px-2 lg:px-10">
-              <img
-                src="phantom.svg"
-                alt=""
-                className="w-12 h-12 lg:h-[70px] lg:w-[70px] rounded-full"
-              />
-              <h3 className="font-semibold text-sm lg:text-2xl py-4">
-                Download and Install Phantom
-              </h3>
-              <p className="text-sm text-left tracking-wide lg:text-base">
-                Download and install a Chrome browser plugin called Phantom.
-                This will allow websites (that you authorize) access to your
-                Ethereum account.
-              </p>
 
-              <div className="bg-black border-[1.5px] border-white font-bold  text-white hover:bg-white hover:text-black rounded-full w-[50%] my-4 px-12 lg:px-8 py-3  ">
-                <h1 className="flex w-full text-center justify-center items-center text-sm lg:text-base">
-                  Download Phantom
-                </h1>
-              </div>
+          <div className=" flex flex-col items-center w-full overflow-hidden h-full  pt-32   pb-20 lg:pb-36 relative ">
+            <div className=" flex flex-col items-center   absolute">
+              <div className="w-[749px] h-[749px] lg:w-[1216px] lg:h-[1216px]  bg-[#414f5f] rounded-full absolute  -top-32 clip-semi-circle  z-30  "></div>
+              <div className="w-[566px] h-[566px] lg:w-[1033px] lg:h-[1033px] bg-[#68758f]   rounded-full absolute -top-16 clip-semi-circle z-50 border border-[#414f5f]  "></div>
+              <div className="w-[383px] h-[383px] lg:w-[850px] lg:h-[850px] bg-[#FFFFFF]/60 rounded-full absolute  z-50 clip-semi-circle   "></div>
             </div>
 
-            <div className="flex flex-col py-20 lg:py-[25%] px-2 lg:px-10">
-              <img
-                src="solana.png"
-                alt=""
-                className="w-12 h-12 lg:h-[70px] lg:w-[70px] rounded-full"
+            <div className="absolute z-50 bottom-2 lg:bottom-2">
+              <Image
+                className="w-10 h-10 lg:w-12 lg:h-12"
+                src="./logo.svg"
+                width={50}
+                height={50}
+                alt="logo"
               />
-              <h3 className="font-semibold text-sm lg:text-2xl py-4">
-                Buy some solana
-              </h3>
-              <p className="text-sm text-left lg:text-base tracking-wider">
-                If you made a new account, buy some Ethereum. The MetaMask
-                plugin has a button that will allow you to buy Ether from
-                Coinbase.
-              </p>
             </div>
 
-            <div className="flex flex-col py-20 lg:py-[25%] px-2 lg:px-10 ">
-              <h3 className="font-semibold text-sm lg:text-2xl py-4">
-                Start bidding, buying and selling
-              </h3>
-              <p className="text-sm text-left tracking-wide lg:text-base">
-                Once you have the plugin installed, this website will recognize
-                it and add buttons that allow you to bid on, buy and sell punks
-                directly in the interface.
-              </p>
+            <div className="absolute left-2 top-[85px] sm:left-32 sm:top-[136px] md:left-36 lg:left-[398px]  lg:top-[150px]   items-center rounded-full p-2 lg:p-3 z-30  bg-[#1db954]   ">
+              <Image
+                className="w-8 h-8 lg:w-9 lg:h-9"
+                src="/company/Spotify_Icon_RGB_White.png"
+                width={500}
+                height={500}
+                alt="logo"
+              />
+            </div>
+            <div className="absolute top-[82px] right-2 sm:right-32 sm:top-[136px] md:right-36 lg:right-[398px] md:bottom-6 lg:bottom-14 p-2 rounded-full z-30 ">
+              <Image
+                className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+                src="/company/mcd.png"
+                width={500}
+                height={500}
+                alt="logo"
+              />
+            </div>
+
+            <div className="absolute z-20  top-0 left-10  sm:left-52  md:left-48  lg:left-[500px] md:top-3 lg:top-4 p-2 rounded-full   bg-white  ">
+              <Image
+                className="w-8 h-8 md:w-8 md:h-8 lg:w-10 rounded-full lg:h-10"
+                src="/company/epl.jpg"
+                width={500}
+                height={500}
+                alt="logo"
+              />
+            </div>
+
+            <div className="absolute z-20  top-0 right-10 sm:right-52   md:right-48 md:top-4 lg:right-[500px] lg:top-4 p-2 rounded-full  bg-red-700  ">
+              <Image
+                className="w-8 h-8 md:w-8 md:h-8 lg:w-10 lg:h-10"
+                src="/company/Domino.svg"
+                width={50}
+                height={50}
+                alt="logo"
+              />
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="w-[100%] overflow-hidden">
-        <Video
-          autoPlay
-          loop
-          controls={false}
-          src="https://stream.mux.com/VEziXgFmSHNNMJ3tmWt3FBzpLaiL00XxbyYrESKum4OA.m3u8"
-        />
       </section>
     </main>
   );
