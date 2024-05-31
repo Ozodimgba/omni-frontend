@@ -325,7 +325,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-contain bg-center h-[80vh] sm:h-[120vh] lg:h-[150vh] p-10 py-[7%] bg-white">
+      <section className="bg-contain bg-center h-[80vh] sm:h-[120vh] lg:h-[170vh] p-10 py-[7%] bg-white">
         <div className="flex flex-row items-center justify-between">
           <h3 className="text-black font-semibold lg:text-5xl">Top Assets</h3>
           <button className="bg-white text-black font-bold p-2 lg:px-8 lg:py-3 border-black border-[3px] rounded-full">
@@ -340,7 +340,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="h-[80%] w-[60%] text-black flex flex-col items-center">
+          <div className="h-[80%] w-[60%] text-black flex flex-col items-center ">
             <div className="  flex gap-2 lg:gap-4 mb-5 lg:mb-0 lg:mt-20 items-center rounded-xl p-2 lg:p-4 border border-[#7800A2] bg-[#7800A2]/40">
               <span className="text-sm flex ">
                 <FaCopy />
@@ -350,7 +350,7 @@ const Home = () => {
               </h2>
             </div>
             <img src="sale.jpeg" alt="" className="h-[100%] w-[100%]" />
-            <h3 className="flex items-center gap-2 lg:gap-4 mt-2 font-semibold text-xs lg:text-lg">
+            <h3 className="flex items-center gap-2 lg:gap-4 mt-2 font-semibold text-xs lg:text-lg p-2">
               Northface Jacket XL{" "}
               <LuBadgeCheck className=" rounded-full  text-2xl lg:text-4xl text-white fill-[#1db954]" />
             </h3>
@@ -365,7 +365,7 @@ const Home = () => {
         </div>
       </section>
       {/**chnage the background of the page itsef to white */}
-      <section className="bg-white h-[700px] relative ">
+      <section className="bg-black h-[700px] relative ">
         <div className="h-full w-full bg-black flex flex-col justify-center items-center pt-20 gap-60 absolute ">
           <div className="flex flex-col justify-center items-center gap-10 pt-32 lg:pt-64 ">
             <h1 className="text-3xl lg:text-5xl font-black tracking-wider">
@@ -397,7 +397,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="absolute left-2 top-[85px] sm:left-32 sm:top-[136px] md:left-36 lg:left-[398px]  lg:top-[150px]   items-center rounded-full p-2 lg:p-3 z-30  bg-[#1db954]   ">
+            <div className="absolute left-2 top-[85px] sm:left-32 sm:top-[136px] md:left-36 lg:left-40  lg:top-36 xl:top-44 xl:left-96   items-center rounded-full p-2 lg:p-3 z-30  bg-[#1db954]   ">
               <Image
                 className="w-8 h-8 lg:w-9 lg:h-9"
                 src="/company/Spotify_Icon_RGB_White.png"
@@ -406,7 +406,7 @@ const Home = () => {
                 alt="logo"
               />
             </div>
-            <div className="absolute top-[82px] right-2 sm:right-32 sm:top-[136px] md:right-36 lg:right-[398px] md:bottom-6 lg:bottom-14 p-2 rounded-full z-30 ">
+            <div className="absolute top-[82px] right-2 sm:right-32 sm:top-[136px] md:right-36  md:bottom-6  lg:right-40  lg:top-36  xl:top-44 xl:right-96     p-2 rounded-full z-30 ">
               <Image
                 className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
                 src="/company/mcd.png"
@@ -416,7 +416,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="absolute z-20  top-0 left-10  sm:left-52  md:left-48  lg:left-[500px] md:top-3 lg:top-4 p-2 rounded-full   bg-white  ">
+            <div className="absolute z-20  top-0 left-10  sm:left-52  md:left-48   md:top-3 -lg:top-12 lg:left-64 xl:top-4 xl:left-[500px]    p-2 rounded-full   bg-white  ">
               <Image
                 className="w-8 h-8 md:w-8 md:h-8 lg:w-10 rounded-full lg:h-10"
                 src="/company/epl.jpg"
@@ -426,7 +426,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="absolute z-20  top-0 right-10 sm:right-52   md:right-48 md:top-4 lg:right-[500px] lg:top-4 p-2 rounded-full  bg-red-700  ">
+            <div className="absolute z-20  top-0 right-10 sm:right-52   md:right-48 md:top-4 -lg:top-12 lg:right-64 xl:top-4 xl:right-[500px]   p-2 rounded-full  bg-red-700  ">
               <Image
                 className="w-8 h-8 md:w-8 md:h-8 lg:w-10 lg:h-10"
                 src="/company/Domino.svg"
