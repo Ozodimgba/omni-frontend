@@ -50,7 +50,8 @@ const Home = () => {
           <Mobile />
         </div>
 
-        <div className="w-[100%] flex flex-col items-center pt-[5%] pb-[3%]">
+        <div className="w-[100%] flex flex-col items-center pt-[3%] pb-[3%]">
+          <h3 className="text-xs lg:text-2xl  py-2">Introducing</h3>
           <h3 className="text-2xl lg:text-8xl text-center font-extrabold text-white">
             Bringing the streets on solana
           </h3>
@@ -110,7 +111,7 @@ const Home = () => {
 
         <div className="flex justify-center py-[9%]">
           <h3 className="font-semibold lg:text-6xl">
-            make money doing stuff your already like
+            earn money trading stuff your already like
           </h3>
         </div>
 
@@ -237,7 +238,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex h-[100vh] pt-12 bg-black flex-col items-center">
+      <section>
+        <img src="section.svg" />
+      </section>
+
+      <section className="flex h-[100vh] pt-12 bg-[#101111] flex-col items-center">
         <h4 className="lg:text-4xl font-semibold py-12">Features</h4>
 
         <div className="w-[100%] h-[100%] my-4 gap-[5%] px-[8%] grid grid-cols-2 justify-start">
@@ -261,7 +266,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="h-[100vh] bg-black">
+      <section className="h-[100vh] bg-[#101111]">
         <div className="flex flex-col items-center gap-8 lg:grid lg:grid-cols-2 px-[6%] lg:h-[100%]">
           <div className="text-black h-[100%] flex items-center">
             <h2 className="font-semibold text-3xl lg:text-7xl text-white">
@@ -287,7 +292,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-wrap lg:flex-nowrap lg:grid lg:grid-cols-2 bg-black h-screen">
+      {/* <section className="flex flex-wrap lg:flex-nowrap lg:grid lg:grid-cols-2 bg-black h-screen">
         <div className="  h-[100%] flex ml-2 flex-col  gap-5 w-[100%] px-[10%]">
           <div
             className={`${
@@ -316,7 +321,7 @@ const Home = () => {
             Verify the authenticity of any product
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-contain bg-center h-[80vh] sm:h-[120vh] lg:h-[150vh] p-10 py-[7%] bg-white">
         <div className="flex flex-row items-center justify-between">
