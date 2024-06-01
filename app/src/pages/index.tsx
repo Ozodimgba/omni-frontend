@@ -365,9 +365,108 @@ const Home = () => {
         </div>
       </section>
 
-     
-      <section className="h-[40vh] lg:h-[100vh] bg-[#101111] flex flex-col justify-end items-center pt-20 overflow-hidden relative">
-      <img src="footer.svg" />
+      <section className="bg-white relative -z-[3]">
+        <div className="h-[100%] w-[100%] bg-black grid grid-cols-7 rounded-tl-[3rem] rounded-tr-[3rem] relative z[-3]">
+          <div className="h-[100%] w-[100%] col-span-3 px-3 lg:p-10 pt-[25%]">
+            <h3 className="font-semibold text-xl lg:text-5xl">
+              How do I use ?
+            </h3>
+          </div>
+          <div className="h-[100%] flex items-center justify-center w-[100%] relative">
+            <div
+              id="points-section"
+              className="py-[%] bg-green-00 flex flex-col items-center justify-between h-[100%] z-[10] w-[30%]"
+            >
+              <div className="w-[5rem] bg-black flex flex-col justify-center items-center">
+                <div className="h-[9rem] w-full bg-black"></div>
+                <div className="w-[3rem] h-[3rem] bg-black rounded-full flex justify-center items-center border-white border-[2px]">
+                  <span>1</span>
+                </div>
+              </div>
+              <div className="w-[3rem] h-[3rem] rounded-full bg-black flex justify-center items-center border-white border-[2px]">
+                <span>2</span>
+              </div>
+              <div className="w-[5rem] bg-black flex flex-col justify-center items-center">
+                <div className="w-[3rem] h-[3rem] bg-black rounded-full flex justify-center items-center border-white border-[2px]">
+                  <span>3</span>
+                </div>
+                <div className="h-[9rem] w-full bg-black"></div>
+              </div>
+            </div>
+            <div
+              id="progress"
+              className="bg-[#FFFFFF30] fixed top-0 h-[100%] w-[2px]"
+            >
+              <div id="progress-line" className="bg-white h-[50vh] "></div>
+            </div>
+          </div>
+          <div className="h-[100%] p10 w-[100%] col-span-3 z-40">
+            <div className="flex flex-col py-20 lg:py-[25%] px-2 lg:px-10">
+              <img
+                src="phantom.svg"
+                alt=""
+                className="w-12 h-12 lg:h-[70px] lg:w-[70px] rounded-full"
+              />
+              <h3 className="font-semibold text-sm lg:text-2xl py-4">
+                Download and Install Phantom
+              </h3>
+              <p className="text-sm text-left tracking-wide lg:text-base">
+                Download and install a Chrome browser plugin called Phantom.
+                This will allow websites (that you authorize) access to your
+                Ethereum account.
+              </p>
+
+              <div className="bg-black border-[1.5px] border-white font-bold  text-white hover:bg-white hover:text-black rounded-full w-[50%] my-4 px-12 lg:px-8 py-3  ">
+                <h1 className="flex w-full text-center justify-center items-center text-sm lg:text-base">
+                  Download Phantom
+                </h1>
+              </div>
+            </div>
+
+            <div className="flex flex-col py-20 lg:py-[25%] px-2 lg:px-10">
+              <img
+                src="solana.png"
+                alt=""
+                className="w-12 h-12 lg:h-[70px] lg:w-[70px] rounded-full"
+              />
+              <h3 className="font-semibold text-sm lg:text-2xl py-4">
+                Buy some solana
+              </h3>
+              <p className="text-sm text-left lg:text-base tracking-wider">
+                If you made a new account, buy some Ethereum. The MetaMask
+                plugin has a button that will allow you to buy Ether from
+                Coinbase.
+              </p>
+            </div>
+
+            <div className="flex flex-col py-20 lg:py-[25%] px-2 lg:px-10 ">
+              <h3 className="font-semibold text-sm lg:text-2xl py-4">
+                Start bidding, buying and selling
+              </h3>
+              <p className="text-sm text-left tracking-wide lg:text-base">
+                Once you have the plugin installed, this website will recognize
+                it and add buttons that allow you to bid on, buy and sell punks
+                directly in the interface.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="h-[60vh] sm:h-[70vh] lg:h-[120vh] bg-[#101111] flex flex-col justify-end items-center pt-20 overflow-hidden relative">
+        <div className="flex flex-col justify-center items-center gap-10">
+          <h1 className="text-3xl lg:text-5xl font-black tracking-wider">
+            Connect. Build. Earn
+          </h1>
+          <p className="text-sm md:text-lg lg:text-2xl text-center tracking-wider w-[70%]">
+            Data is a very profitable asset. Omni allows you to bring in your
+            data and build fun stuff on-chain{" "}
+          </p>
+          <div className="rounded-3xl p-2 lg:px-4 lg:py-2 text-sm md:text-lg font-semibold text-black bg-white">
+            <button>Documentation</button>
+          </div>
+        </div>
+        <img src="footer.svg" />
       </section>
     </main>
   );
