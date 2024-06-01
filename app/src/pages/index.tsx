@@ -325,7 +325,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-contain bg-center h-[80vh] sm:h-[120vh] lg:h-[170vh] p-10 py-[7%] bg-white">
+      <section className="bg-contain bg-center h-[80vh] sm:h-[100vh] lg:h-[170vh] p-10 py-[7%] bg-white">
         <div className="flex flex-row items-center justify-between">
           <h3 className="text-black font-semibold lg:text-5xl">Top Assets</h3>
           <button className="bg-white text-black font-bold p-2 lg:px-8 lg:py-3 border-black border-[3px] rounded-full">
@@ -366,76 +366,8 @@ const Home = () => {
       </section>
 
      
-      <section className="h-[85vh]  lg:h-[90vh] bg-black flex flex-col justify-center items-center pt-20 overflow-hidden relative">
-        <div className="flex flex-col justify-center items-center gap-10 pt-4 lg:pt-12">
-          <h1 className="text-3xl lg:text-5xl font-black tracking-wider">
-            Connect. Build. Earn
-          </h1>
-          <p className="text-sm md:text-lg lg:text-2xl text-center tracking-wider w-[90%] lg:w-[70%]">
-            Data is a very profitable asset. Omni allows you to bring in your
-            data and build fun stuff on-chain{" "}
-          </p>
-          <div className="rounded-3xl p-2 lg:px-4 lg:py-2 text-sm md:text-lg font-semibold text-black bg-white">
-            <button>Documentation</button>
-          </div>
-        </div>
-
-        <div className=" flex flex-col items-center w-full overflow-hidden h-full  pt-32   pb-20 lg:pb-36 bottom-0 relative">
-          <div className=" flex flex-col items-center   absolute bottom-[72px]">
-            <div className="w-[749px] h-[749px] lg:w-[1216px] lg:h-[1216px]  bg-[#414f5f] rounded-full absolute  -top-32 clip-semi-circle  z-30  "></div>
-            <div className="w-[566px] h-[566px] lg:w-[1033px] lg:h-[1033px] bg-[#68758f]   rounded-full absolute -top-16 clip-semi-circle z-50 border border-[#414f5f]  "></div>
-            <div className="w-[383px] h-[383px] lg:w-[850px] lg:h-[850px] bg-[#FFFFFF]/60 rounded-full absolute  z-50 clip-semi-circle   "></div>
-          </div>
-
-          <div className="absolute z-50 bottom-2 lg:bottom-2">
-            <Image
-              className="w-10 h-10 lg:w-12 lg:h-12"
-              src="./logo.svg"
-              width={50}
-              height={50}
-              alt="logo"
-            />
-          </div>
-
-          <div className="absolute left-2 top-44 sm:left-28 sm:top-56 md:left-36 lg:left-44  xl:left-[440px] items-center rounded-full p-2 lg:p-3 z-30  bg-[#1db954]   ">
-            <Image
-              className="w-8 h-8 lg:w-9 lg:h-9"
-              src="/company/Spotify_Icon_RGB_White.png"
-              width={500}
-              height={500}
-              alt="logo"
-            />
-          </div>
-          <div className="absolute top-44 right-2 sm:right-28 sm:top-56  md:right-36  md:bottom-6  lg:right-40 xl:right-[440px] p-2 rounded-full z-30 ">
-            <Image
-              className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
-              src="/company/mcd.png"
-              width={500}
-              height={500}
-              alt="logo"
-            />
-          </div>
-
-          <div className="absolute z-20  top-24 left-10  sm:left-40 sm:top-28  md:left-48  lg:top-20   lg:left-72  xl:left-[520px] xl:top-28   p-2 rounded-full   bg-white  ">
-            <Image
-              className="w-8 h-8 md:w-8 md:h-8 lg:w-10 rounded-full lg:h-10"
-              src="/company/epl.jpg"
-              width={500}
-              height={500}
-              alt="logo"
-            />
-          </div>
-
-          <div className="absolute z-20 top-24 right-10 sm:right-40 sm:top-28    md:right-48  lg:top-20   lg:right-72 xl:right-[520px] xl:top-28    p-2 rounded-full  bg-red-700  ">
-            <Image
-              className="w-8 h-8 md:w-8 md:h-8 lg:w-10 lg:h-10"
-              src="/company/Domino.svg"
-              width={50}
-              height={50}
-              alt="logo"
-            />
-          </div>
-        </div>
+      <section className="h-[40vh] lg:h-[100vh] bg-[#101111] flex flex-col justify-end items-center pt-20 overflow-hidden relative">
+      <img src="footer.svg" />
       </section>
     </main>
   );
