@@ -68,22 +68,14 @@ const Mobile: React.FC = () => {
         }`}
       >
         <ul className="flex flex-col gap-4 bg-white px-4 py-8 rounded-xl">
-          <li>
-            <Link
-              href="/"
-              className="flex md:text-lg font-bold text-black hover:text-[#ffb703] w-full py-2 justify-center"
-              onClick={() => setMobileNavOpen(false)}
-            >
-              About
-            </Link>
-          </li>
+          
           <li>
             <Link
               href="/"
               className="md:text-lg font-bold text-black hover:text-[#ffb703] w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm transition duration-150 ease-in-out"
               onClick={() => setMobileNavOpen(false)}
             >
-              FAQs
+              Docs
             </Link>
           </li>
           <li>

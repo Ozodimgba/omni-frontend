@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      clipPath: {
+        "semi-circle": "polygon(0 0, 100% 0, 100% 35%, 0 35%)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -5,8 +5,8 @@ import Mobile from "./components/mobile";
 
 import Image from "next/image";
 import { Inter, Gochi_Hand, DM_Sans } from "next/font/google";
-import { FaXTwitter, FaDiscord } from "react-icons/fa6";
-import Video from "next-video";
+import { FaXTwitter, FaDiscord, FaCheck, FaCopy } from "react-icons/fa6";
+import { LuBadgeCheck } from "react-icons/lu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +31,11 @@ const Home = () => {
     <main className={`flex min-h-screen text-white flex-col ${dm.className}`}>
       <section className="bg-[#101111]">
         <div className="w-[100%] flex flex-row  items-center justify-between py-6 px-7">
-          <div className={`text-white flex items-center gap-2 text-2xl lg:text-3xl ${gochi.className}`}>
+          <div
+            className={`text-white flex items-center gap-2 text-2xl lg:text-3xl ${gochi.className}`}
+          >
             <Image src="./logo.svg" width={50} height={50} alt="logo" />
-            <h2>omni</h2>
+            <h2 className="text-3xl lg:text-4xl">omni</h2>
           </div>
           <div className="hidden lg:flex items-center gap-5">
             {/* <button>About</button>
@@ -44,7 +46,11 @@ const Home = () => {
             <button className="bg-black text-white font-bold px-8 py-3 border-white border-[3px] rounded-full">
               Get Started
             </button>
-            <FaXTwitter size={25} href="https://x.com/use_Omni" className="cursor-pointer" />
+            <FaXTwitter
+              size={25}
+              href="https://x.com/use_Omni"
+              className="cursor-pointer"
+            />
             <FaDiscord size={30} className="cursor-pointer" />
           </div>
           <Mobile />
@@ -57,7 +63,8 @@ const Home = () => {
           </h3>
 
           <p className="text-xs lg:text-xl xl:px-[13%] tracking-wider mx-4 text-center py-3">
-            Omni is redefining the way oralces are used on chain by bringing price of regular everyday items on chain
+            Omni is redefining the way oralces are used on chain by bringing
+            price of regular everyday items on chain
           </p>
         </div>
 
@@ -323,11 +330,9 @@ const Home = () => {
         </div>
       </section> */}
 
-      <section className="bg-contain bg-center h-[80vh] sm:h-[120vh] lg:h-[150vh] p-10 py-[7%] bg-white">
+      <section className="bg-contain bg-center h-[80vh] sm:h-[100vh] lg:h-[170vh] p-10 py-[7%] bg-white">
         <div className="flex flex-row items-center justify-between">
-          <h3 className="text-black font-semibold lg:text-5xl">
-            Top Assets
-          </h3>
+          <h3 className="text-black font-semibold lg:text-5xl">Top Assets</h3>
           <button className="bg-white text-black font-bold p-2 lg:px-8 lg:py-3 border-black border-[3px] rounded-full">
             View all
           </button>
@@ -340,9 +345,20 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="h-[80%] w-[60%] text-black flex flex-col items-center">
+          <div className="h-[80%] w-[60%] text-black flex flex-col items-center ">
+            <div className="  flex gap-2 lg:gap-4 mb-5 lg:mb-0 lg:mt-20 items-center rounded-xl p-2 lg:p-4 border border-[#7800A2] bg-[#7800A2]/40">
+              <span className="text-sm flex ">
+                <FaCopy />
+              </span>
+              <h2 className="text-[10px] md:text-base">
+                Ee79adtuYt4ecrJ6NFP8WF7FTcMb5hDuxRwLHsdu4VQM
+              </h2>
+            </div>
             <img src="sale.jpeg" alt="" className="h-[100%] w-[100%]" />
-            <h3 className="font-semibold lg:text-lg">Northface Jacket XL</h3>
+            <h3 className="flex items-center gap-2 lg:gap-4 mt-2 font-semibold text-xs lg:text-lg p-2">
+              Northface Jacket XL{" "}
+              <LuBadgeCheck className=" rounded-full  text-2xl lg:text-4xl text-white fill-[#1db954]" />
+            </h3>
             <h3 className="text-xs lg:text-base"> 200 USDC</h3>
           </div>
 
@@ -353,7 +369,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/**chnage the background of the page itsef to white */}
+
       <section className="bg-white relative -z-[3]">
         <div className="h-[100%] w-[100%] bg-black grid grid-cols-7 rounded-tl-[3rem] rounded-tr-[3rem] relative z[-3]">
           <div className="h-[100%] w-[100%] col-span-3 px-3 lg:p-10 pt-[25%]">
@@ -442,13 +458,20 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-[100%] overflow-hidden">
-        <Video
-          autoPlay
-          loop
-          controls={false}
-          src="https://stream.mux.com/VEziXgFmSHNNMJ3tmWt3FBzpLaiL00XxbyYrESKum4OA.m3u8"
-        />
+      <section className="h-[60vh] sm:h-[70vh] lg:h-[120vh] bg-[#101111] flex flex-col justify-end items-center pt-20 overflow-hidden relative">
+        <div className="flex flex-col justify-center items-center gap-10">
+          <h1 className="text-3xl lg:text-5xl font-black tracking-wider">
+            Connect. Build. Earn
+          </h1>
+          <p className="text-sm md:text-lg lg:text-2xl text-center tracking-wider w-[70%]">
+            Data is a very profitable asset. Omni allows you to bring in your
+            data and build fun stuff on-chain{" "}
+          </p>
+          <div className="rounded-3xl p-2 lg:px-4 lg:py-2 text-sm md:text-lg font-semibold text-black bg-white">
+            <button>Documentation</button>
+          </div>
+        </div>
+        <img src="footer.svg" />
       </section>
     </main>
   );
