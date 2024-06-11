@@ -243,7 +243,7 @@ const Home = () => {
       </section>
 
       <section className="flex h-[100vh] pt-12 bg-[#101111] flex-col items-center">
-        <h4 className="lg:text-4xl font-semibold py-12">Features</h4>
+        <h4 className="lg:text-4xl font-semibold py-12">Use Cases</h4>
 
         <div className="w-[100%] h-[100%] my-4 gap-[5%] px-[8%] grid grid-cols-2 justify-start">
           <div className="rounded-xl h-[80%] w-[100%] border-[#00000040] border-[5px] p-5 bg-[#C5F9D7] ">
@@ -276,12 +276,7 @@ const Home = () => {
 
           <div className="text-black text-sm lg:text-base text-justify leading-6 tracking-wide lg:pl-[10%] h-[100%] flex flex-col justify-center items-center">
             <p className="text-white">
-              Omo I{"'"}m tired of seeing overpriced hoodies and sneakers on
-              Instagram stores. I lost my mind when I saw an unbranded plain
-              hoodie for NGN30k! I decided to use my knowledge of programming
-              and economics to build a store that allows both sellers and buyers
-              to actively set the price of commodities. Hype it up! If you{"'"}
-              re tired of buying overpriced FAKE nikes.
+            Omni Oracle was inspired by the playful spirit of the crypto community, where meme coins and degens thrive. By providing real-time prices of everyday items like chicken, Domino&apos;s, and PlayStations, Omni adds a fun twist to price tracking. This tool bridges the gap between serious financial data and the whimsical nature of the blockchain world, making everyday price information engaging and relatable for everyone.
             </p>
             <div className="flex w-[100%] py-3 justify-end">
               <button className="bg-white text-black font-bold px-8 py-3 rounded-full">
@@ -322,40 +317,126 @@ const Home = () => {
           </div>
         </div>
       </section> */}
+      <section className="h-[100vh] text-black bg-white grid grid-rows-10">
 
-      <section className="bg-contain bg-center h-[80vh] sm:h-[120vh] lg:h-[150vh] p-10 py-[7%] bg-white">
-        <div className="flex flex-row items-center justify-between">
-          <h3 className="text-black font-semibold lg:text-5xl">
-            Top Assets
-          </h3>
-          <button className="bg-white text-black font-bold p-2 lg:px-8 lg:py-3 border-black border-[3px] rounded-full">
-            View all
-          </button>
+      <div className="border-black border-b-[1px] grid grid-cols-12">
+       <div className="flex justify-center bg-green-400 items-center">
+        <h3 className="text-[0.9rem]">Search</h3>
+       </div>
+       <div className="flex items-center bg-green-400 col-span-3">
+        <h3 className="text-[0.9rem]">Nike Dunk&apos;s Retro 4s</h3>
+       </div>
+
+       <div className="flex justify-center items-center col-span-4">
+        <h3 className="text-[0.9rem]">Fetch 8 items</h3>
+       </div>
+
+       <div className="flex items-center col-span-3">
+       </div>
+
+       <div className="flex justify-center items-center">
+        <h3 className="text-[0.9rem]">Account</h3>
+       </div>
+      </div>
+
+      <div className="row-span-8 h-[100%] bg-green-400">
+        <div className="grid grid-cols-12 h-full">
+        <div className="bg-white h-full w-full col-span-9"></div>
+
+        <div className="bg-white h-full w-full border-l-black border-[1px] col-span-3">
+          <div className="h-full grid grid-rows-3">
+          <div className="border-b-black border-[1px] text-[0.8rem] p-2 row-span-1 h-full">
+           {"base is contrasted by curry brown overlays at the toe and heel, while Fossil coloring is applied to the Swoosh and heel tab, the latter marked with traditional Nike branding. The low-top rides on a durable rubber cupsole, featuring a grippy traction pattern virtually identical to another mid ‘80s hoops shoe, the Air Jordan 1."}
+          </div>
+
+          <div className="border-b-black text-[0.8rem] p-2 border-[1px] h-full">
+           <div><h3>Brands</h3></div>
+           <div className="flex overflow-x-scroll no-scrollbar">
+           <img src="sale.jpeg" alt="" className="h-[90px] w-[110px]" />
+           <img src="sale.jpeg" alt="" className="h-[90px] w-[110px]" />
+           <img src="sale.jpeg" alt="" className="h-[90px] w-[110px]" />
+           </div>
+          </div>
+
+          <div className="text-[0.8rem] p-2  h-full">
+           <div><h3>Assets</h3></div>
+           <div className="flex overflow-x-scroll no-scrollbar">
+           <img src="sale.jpeg" alt="" className="h-[90px] w-[110px]" />
+           <img src="sale.jpeg" alt="" className="h-[90px] w-[110px]" />
+           <img src="sale.jpeg" alt="" className="h-[90px] w-[110px]" />
+           </div>
+          </div>
+
+
+          </div>
         </div>
+      </div>
+      </div>
 
-        <div className="flex items-center justify-between mt-32 lg:mt-3">
-          <div className="w-[20%] flex justify-center">
-            <button>
-              <img src="arrow.png" alt="" className="h-[25px] scale-x-[-1]" />
-            </button>
-          </div>
 
-          <div className="h-[80%] w-[60%] text-black flex flex-col items-center">
-            <img src="sale.jpeg" alt="" className="h-[100%] w-[100%]" />
-            <h3 className="font-semibold lg:text-lg">Northface Jacket XL</h3>
-            <h3 className="text-xs lg:text-base"> 200 USDC</h3>
-          </div>
+      <div className="row-span-2 border-t-black border-[1px]">
 
-          <div className=" w-[20%] flex justify-center">
-            <button>
-              <img src="arrow.png" alt="" className="h-[25px]" />
-            </button>
-          </div>
+      <div className="grid h-[100%] grid-cols-12">
+       <div className="flex justify-center bg-green-400 col-span-3 items-center">
+        <h3 className="text-[0.9rem]">Dunk Low Premium &apos;Medium Curry&apos;</h3>
+       </div>
+       
+
+       <div className="flex justify-center items-center col-span-6">
+  <div className="grid grid-cols-7 gap-x-9">
+
+    <div className="flex flex-col justify-center items-center flex-grow">
+      <h2 className="text-[0.7rem]">17:13</h2>
+      <h2 className="text-[1rem]">$1.311</h2>
+    </div>
+
+    <div className="flex flex-col justify-center items-center flex-grow">
+      <h2 className="text-[0.7rem]">17:15</h2>
+      <h2 className="text-[1rem]">$1.301</h2>
+    </div>
+
+    <div className="flex flex-col justify-center items-center flex-grow">
+      <h2 className="text-[0.7rem]">17:17</h2>
+      <h2 className="text-[1rem]">$1.317</h2>
+    </div>
+
+    <div className="flex flex-col justify-center items-center flex-grow">
+      <h2 className="text-[0.7rem]">17:19</h2>
+      <h2 className="text-[1rem]">$1.299</h2>
+    </div>
+
+    <div className="flex flex-col justify-center items-center flex-grow">
+      <h2 className="text-[0.7rem]">17:20</h2>
+      <h2 className="text-[1rem]">$1.292</h2>
+    </div>
+
+    <div className="flex flex-col justify-center items-center flex-grow">
+      <h2 className="text-[0.7rem]">17:21</h2>
+      <h2 className="text-[1rem]">$1.302</h2>
+    </div>
+
+    <div className="flex flex-col justify-center items-center flex-grow">
+      <h2 className="text-[0.7rem]">17:23</h2>
+      <h2 className="text-[1rem]">$1.312</h2>
+    </div>
+
+  </div>
+</div>
+
+       <div className="flex justify-center col-span-3 items-center">
+        <div className="flex gap-3">
+        <h3 className="text-[0.9rem]">Activity</h3>
+        <h3 className="text-[0.9rem]">Reputation</h3>
         </div>
+        
+       </div>
+      </div>
+      </div>
       </section>
+
       {/**chnage the background of the page itsef to white */}
       <section className="bg-white relative -z-[3]">
-        <div className="h-[100%] w-[100%] bg-black grid grid-cols-7 rounded-tl-[3rem] rounded-tr-[3rem] relative z[-3]">
+        <div className="h-[100%] w-[100%] bg-black grid grid-cols-7 relative z[-3]">
           <div className="h-[100%] w-[100%] col-span-3 px-3 lg:p-10 pt-[25%]">
             <h3 className="font-semibold text-xl lg:text-5xl">
               How do I use ?
@@ -442,13 +523,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-[100%] overflow-hidden">
-        <Video
-          autoPlay
-          loop
-          controls={false}
-          src="https://stream.mux.com/VEziXgFmSHNNMJ3tmWt3FBzpLaiL00XxbyYrESKum4OA.m3u8"
-        />
+      <section>
+        <img src="footer.svg" />
       </section>
     </main>
   );
